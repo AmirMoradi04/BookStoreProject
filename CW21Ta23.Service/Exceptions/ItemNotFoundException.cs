@@ -5,5 +5,8 @@ public class ItemNotFoundException : BaseAppException
     public ItemNotFoundException(string itemName, int id) : base($"{itemName} with id {id} was not found",404)
     {
     }
+    public ItemNotFoundException(string itemName,string name) : base($"{itemName} with name {name} was not found",404)
+    {
+    }
     
 }

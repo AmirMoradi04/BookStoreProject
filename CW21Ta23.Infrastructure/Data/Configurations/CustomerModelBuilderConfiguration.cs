@@ -11,12 +11,28 @@ public class CustomerModelBuilderConfiguration : BaseModelBuilderConfiguration<C
         modelBuilder.Property(c => c.FullName)
             .HasMaxLength(150)
             .IsRequired();
+
+        modelBuilder.Property(c => c.UserName)
+            .HasMaxLength(50)
+            .IsRequired();
+
+        modelBuilder.HasIndex(c => c.UserName)
+            .IsUnique();
+
+        modelBuilder.Property(c => c.PasswordHash)
+            .HasColumnType("nvarchar(256)")
+            .HasMaxLength(256)
+            .IsRequired();
+
         modelBuilder.Property(c => c.Email)
             .HasMaxLength(150);
+
         modelBuilder.HasIndex(c => c.Email)
             .IsUnique();
+
         modelBuilder.Property(c => c.PhoneNumber)
             .HasMaxLength(20);
+
         modelBuilder.HasMany(c => c.Orders)
             .WithOne(o => o.Customer)
             .HasForeignKey(o => o.CustomerId)

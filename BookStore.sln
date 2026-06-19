@@ -15,9 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Domain", "CW21Ta2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Infrastructure", "CW21Ta23.Infrastructure\BookStore.Infrastructure.csproj", "{FC842836-6C50-4ED7-9B50-062097F375C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CW21Ta23.Service", "CW21Ta23.Service\CW21Ta23.Service.csproj", "{6C311D3C-0212-4BA0-A4EC-511BFB43C794}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.Service", "CW21Ta23.Service\BookStore.Service.csproj", "{6C311D3C-0212-4BA0-A4EC-511BFB43C794}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CW21Ta23.WebApi", "CW21Ta23.WebApi\CW21Ta23.WebApi.csproj", "{FF785A99-6041-478B-9A6E-964BBBEAD0AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookStore.WebApi", "CW21Ta23.WebApi\BookStore.WebApi.csproj", "{FF785A99-6041-478B-9A6E-964BBBEAD0AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,5 +50,8 @@ Global
 		{FC842836-6C50-4ED7-9B50-062097F375C4} = {26D07930-4DDC-4F6A-B736-B075394338E6}
 		{6C311D3C-0212-4BA0-A4EC-511BFB43C794} = {8ADA336F-C1D3-42CF-8E76-8AF50F8CDC7B}
 		{FF785A99-6041-478B-9A6E-964BBBEAD0AC} = {7F332FA8-0E95-49C0-A4D6-7079473BDE9A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E943E165-01B5-4F9F-B610-F9A044BDBABE}
 	EndGlobalSection
 EndGlobal

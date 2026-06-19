@@ -18,7 +18,7 @@
     <ItemGroup>
       <ProjectReference Include="..\CW21Ta23.Domain\BookStore.Domain.csproj" />
       <ProjectReference Include="..\CW21Ta23.Infrastructure\BookStore.Infrastructure.csproj" />
-      <ProjectReference Include="..\CW21Ta23.Service\CW21Ta23.Service.csproj" />
+      <ProjectReference Include="..\CW21Ta23.Service\BookStore.Service.csproj" />
     </ItemGroup>
 
 </Project>
