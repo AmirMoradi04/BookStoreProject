@@ -1,0 +1,9 @@
+{"Timestamp":"2026-06-26T12:40:27.1786808Z","Level":"Debug","Message":"Middleware loaded","Exception":null}
+{"Timestamp":"2026-06-26T12:40:27.2129305Z","Level":"Debug","Message":"Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16517 B).","Exception":null}
+{"Timestamp":"2026-06-26T12:40:27.2209701Z","Level":"Debug","Message":"Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).","Exception":null}
+{"Timestamp":"2026-06-26T12:40:27.3665574Z","Level":"Debug","Message":"Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true","Exception":null}
+{"Timestamp":"2026-06-26T12:40:27.495524Z","Level":"Information","Message":"Now listening on: https://localhost:7140","Exception":null}
+{"Timestamp":"2026-06-26T12:40:27.4976002Z","Level":"Information","Message":"Now listening on: http://localhost:5072","Exception":null}
+{"Timestamp":"2026-06-26T12:40:27.7464724Z","Level":"Information","Message":"Application started. Press Ctrl\u002BC to shut down.","Exception":null}
+{"Timestamp":"2026-06-26T12:40:27.7476237Z","Level":"Information","Message":"Hosting environment: Development","Exception":null}
+{"Timestamp":"2026-06-26T12:40:27.7486029Z","Level":"Information","Message":"Content root path: C:\\Users\\amirh\\Downloads\\cw21ta25-Test2\\CW21Ta23.WebApi","Exception":null}

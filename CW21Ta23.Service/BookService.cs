@@ -3,6 +3,7 @@ using CW21Ta23.Domain.Entities;
 using CW21Ta23.Domain.RepositoryInterFaces;
 using CW21Ta23.Domain.ServiceIntefaces;
 using CW21Ta23.Service.Exceptions;
+using Microsoft.Extensions.Logging;
 using ValidationException = System.ComponentModel.DataAnnotations.ValidationException;
 
 namespace CW21Ta23.Service;
@@ -14,20 +15,28 @@ public class BookService : IBookService
     private readonly ICategoryRepository _categoryRepository;
     private readonly IPublisherRepository _publisherRepository;
     private readonly ITagRepository _tagRepository;
+    private readonly ILogger<BookService> _logger;
 
     public BookService(IBookRepository bookRepository, IAuthorRepository authorRepository,
-        ICategoryRepository categoryRepository, IPublisherRepository publisherRepository, ITagRepository tagRepository)
+        ICategoryRepository categoryRepository, IPublisherRepository publisherRepository
+        , ITagRepository tagRepository
+        , ILogger<BookService> logger)
     {
         _bookRepository = bookRepository;
         _authorRepository = authorRepository;
         _categoryRepository = categoryRepository;
         _publisherRepository = publisherRepository;
         _tagRepository = tagRepository;
+        _logger = logger;
     }
 
     public async Task<bool> BookExists(string title)
     {
         var books = await _bookRepository.QueryAsync(b => b.Title == title);
+        if (books != null)
+        {
+            _logger.LogInformation($"book is exist : => {title}");
+        }
         return books.Any();
     }
 
@@ -50,7 +59,11 @@ public class BookService : IBookService
         var books = await _bookRepository.GetAllAsync();
 
         if (!books.Any())
+        {
+            _logger.LogError("chizi peyda nashod ");
             throw new ArgumentNullException("books not exist");
+        }
+           
 
         var avg = books.Average(b => b.Price);
 

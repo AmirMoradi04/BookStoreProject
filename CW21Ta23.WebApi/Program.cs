@@ -1,3 +1,4 @@
+using BookStore.Domain.Logging;
 using CW21Ta23.Domain.RepositoryInterFaces;
 using CW21Ta23.Domain.ServiceIntefaces;
 using CW21Ta23.Infrastructure.Data;
@@ -20,6 +21,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("Redis");
+    options.InstanceName = "BookStore:";
+});
+
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<IAuthorRepository, AuthorRepository>();
@@ -29,6 +37,8 @@ builder.Services.AddScoped<IBookService, BookService>();
 builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddScoped<IAuthorService, AuthorService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+
+builder.Logging.AddProvider(new FileLoggerProvider("Logs/log.json"));
 
 var app = builder.Build();
 

@@ -21,4 +21,8 @@
       <ProjectReference Include="..\CW21Ta23.Service\BookStore.Service.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Logs\" />
+    </ItemGroup>
+
 </Project>
