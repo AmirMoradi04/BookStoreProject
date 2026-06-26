@@ -36,6 +36,7 @@ public class BookService : IBookService
         if (books != null)
         {
             _logger.LogInformation($"book is exist : => {title}");
+            
         }
         return books.Any();
     }
